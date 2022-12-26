@@ -11,6 +11,7 @@
 		CE4284C42952A4D4005A5F0C /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */; };
 		CE4284C62952A4D4005A5F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4284C52952A4D4005A5F0C /* Assets.xcassets */; };
 		CE4284C92952A4D4005A5F0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4284C82952A4D4005A5F0C /* Preview Assets.xcassets */; };
+		CE4284D02959B0C6005A5F0C /* RestaurantListView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284CF2959B0C6005A5F0C /* RestaurantListView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
 		CE4284C52952A4D4005A5F0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE4284C82952A4D4005A5F0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE4284CF2959B0C6005A5F0C /* RestaurantListView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */,
 				CE4284C52952A4D4005A5F0C /* Assets.xcassets */,
 				CE4284C72952A4D4005A5F0C /* Preview Content */,
+				CE4284CF2959B0C6005A5F0C /* RestaurantListView2.swift */,
 			);
 			path = AppleFoodPin;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4284D02959B0C6005A5F0C /* RestaurantListView2.swift in Sources */,
 				CE4284C42952A4D4005A5F0C /* RestaurantListView.swift in Sources */,
 				CE4284C22952A4D4005A5F0C /* AppleFoodPinApp.swift in Sources */,
 			);

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RestaurantListView: View {
+struct RestaurantListView2: View {
     
     var restaurantNames = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oyster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats", "Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "Royal Oak", "CASK Pub and Kitchen"]
     
@@ -20,10 +20,14 @@ struct RestaurantListView: View {
     
     var body: some View {
         List(restaurantNames.indices, id: \.self){ index in
-            HStack(alignment: .top, spacing: 20) {
+            VStack(alignment: .leading, spacing: 10) {
                 Image(restaurantImages[index])
                     .resizable()
-                    .frame(width: 120, height: 118)
+//                    .scaledToFill()
+//                    .scaledToFit()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: 200)
+//                    .aspectRatio(contentMode: .fit)
                     .cornerRadius(20)
                 
                 VStack(alignment: .leading) {
@@ -37,6 +41,8 @@ struct RestaurantListView: View {
                         .font(.system(.subheadline, design: .rounded))
                         .foregroundColor(.gray)
                 }
+                .padding(.horizontal)
+                .padding(.bottom)
             }
             .listRowSeparator(.hidden)
         }
@@ -44,11 +50,11 @@ struct RestaurantListView: View {
     }
 }
 
-struct RestaurantListView_Previews: PreviewProvider {
+struct RestaurantListView2_Previews: PreviewProvider {
     static var previews: some View {
-        RestaurantListView()
+        RestaurantListView2()
         
-        RestaurantListView()
-            .preferredColorScheme(.dark)
+//        RestaurantListView()
+//            .preferredColorScheme(.dark)
     }
 }
