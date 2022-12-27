@@ -55,9 +55,9 @@
 			children = (
 				CE4284C12952A4D4005A5F0C /* AppleFoodPinApp.swift */,
 				CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */,
+				CE4284CF2959B0C6005A5F0C /* RestaurantListView2.swift */,
 				CE4284C52952A4D4005A5F0C /* Assets.xcassets */,
 				CE4284C72952A4D4005A5F0C /* Preview Content */,
-				CE4284CF2959B0C6005A5F0C /* RestaurantListView2.swift */,
 			);
 			path = AppleFoodPin;
 			sourceTree = "<group>";
