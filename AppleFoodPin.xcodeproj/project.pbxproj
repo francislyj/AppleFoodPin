@@ -55,12 +55,11 @@
 		CE4284C02952A4D4005A5F0C /* AppleFoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				CE4284D4295C369D005A5F0C /* Model */,
+				CE4284D3295C3682005A5F0C /* View */,
 				CE4284C12952A4D4005A5F0C /* AppleFoodPinApp.swift */,
-				CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */,
-				CE4284CF2959B0C6005A5F0C /* RestaurantListView2.swift */,
 				CE4284C52952A4D4005A5F0C /* Assets.xcassets */,
 				CE4284C72952A4D4005A5F0C /* Preview Content */,
-				CE4284D1295C2968005A5F0C /* Restaurant.swift */,
 			);
 			path = AppleFoodPin;
 			sourceTree = "<group>";
@@ -71,6 +70,23 @@
 				CE4284C82952A4D4005A5F0C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE4284D3295C3682005A5F0C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE4284CF2959B0C6005A5F0C /* RestaurantListView2.swift */,
+				CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE4284D4295C369D005A5F0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE4284D1295C2968005A5F0C /* Restaurant.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
