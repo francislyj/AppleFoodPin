@@ -34,17 +34,47 @@ struct RestaurantListView: View {
         ]
     
     var body: some View {
-        List {
-            ForEach(restaurants.indices, id: \.self) { index in
-                BasicTextImageRow(restaurant: $restaurants[index])
-            }
-            .onDelete(perform: { indexSet in
-                restaurants.remove(atOffsets: indexSet)
-            })
-            
+        NavigationView {
+            List {
+                ForEach(restaurants.indices, id: \.self) { index in
+                    ZStack(alignment: .leading) {
+                        NavigationLink(destination: RestaurantDetailView(restaurant: restaurants[index])) {
+//                            BasicTextImageRow(restaurant: $restaurants[index])
+                            EmptyView()
+                        }
+                        .opacity(0)
+                        
+                        
+                        BasicTextImageRow(restaurant: $restaurants[index])
+//                            .swipeActions(edge: .trailing, allowsFullSwipe: false, content: {
+//                                Button {
+//
+//                                } label: {
+//                                    Image(systemName: "heart")
+//                                }
+//                                .tint(.green)
+//
+//                                Button {
+//
+//                                }label: {
+//                                    Image(systemName: "square.and.arrow.up")
+//                                }
+//                                .tint(.orange)
+//                        })
+                    }
+                }
+                .onDelete(perform: { indexSet in
+                    restaurants.remove(atOffsets: indexSet)
+                })
+                
 
+            }
+            .listStyle(.plain)
+            
+            .navigationTitle("FoodPin")
+            .navigationBarTitleDisplayMode(.automatic)
         }
-        .listStyle(.plain)
+        .accentColor(.green)
     }
 }
 
@@ -96,24 +126,77 @@ struct BasicTextImageRow: View {
                 Spacer()
                 
                 Image(systemName: "heart.fill")
-                    .foregroundColor(.green)
+                    .foregroundColor(.indigo)
             }
         }
         .listRowSeparator(.hidden)
-        .onTapGesture {
-            showOptions.toggle()
+        .contextMenu {
+            Button(action: {
+                self.showError.toggle()
+            }){
+                HStack {
+                    Text("Reserve a table")
+                    Image(systemName: "phone")
+                }
+            }
+            
+            Button {
+                restaurant.isFavorite.toggle()
+            } label: {
+                HStack {
+                    Text(restaurant.isFavorite ? "Remove from favourites" : "Make a favourite")
+                    Image(systemName: "heart")
+                }
+            }
+            
+            Button {
+                showOptions.toggle()
+            } label: {
+                HStack {
+                    Text("Share")
+                    Image(systemName: "square.and.arrow.up")
+                }
+            }
         }
-        .actionSheet(isPresented: $showOptions) {
-            ActionSheet(title: Text("What do you want to do?"), message: nil, buttons: [
-                .default(Text("Reserve a table")) {
-                    showError.toggle()
-                },
-                .default(Text(restaurant.isFavorite ? "Remove from favourites" : "Make a favourite")) {
-                    restaurant.isFavorite.toggle()
-                },
-                .cancel()
-            ])
+        .sheet(isPresented: $showOptions) {
+            let defaultText = "Just checking in at \(restaurant.name)"
+            
+            if let imageToShare = UIImage(named: restaurant.image) {
+                ActivityView(activityItems: [defaultText, imageToShare])
+            } else {
+                ActivityView(activityItems: [defaultText])
+            }
         }
+        .swipeActions(edge: .trailing, allowsFullSwipe: false, content: {
+            Button {
+                restaurant.isFavorite.toggle()
+            } label: {
+                Image(systemName: "heart")
+            }
+            .tint(.green)
+
+            Button {
+                showOptions.toggle()
+            
+            }label: {
+                Image(systemName: "square.and.arrow.up")
+            }
+            .tint(.orange)
+    })
+//        .onTapGesture {
+//            showOptions.toggle()
+//        }
+//        .actionSheet(isPresented: $showOptions) {
+//            ActionSheet(title: Text("What do you want to do?"), message: nil, buttons: [
+//                .default(Text("Reserve a table")) {
+//                    showError.toggle()
+//                },
+//                .default(Text(restaurant.isFavorite ? "Remove from favourites" : "Make a favourite")) {
+//                    restaurant.isFavorite.toggle()
+//                },
+//                .cancel()
+//            ])
+//        }
         .alert(isPresented: $showError) {
             Alert(title: Text("Not yet avaliable"), message: Text("Sorry, this feature is not avaliable yet, please retry later."), primaryButton: .default(Text("Ok")), secondaryButton: .cancel())
         }

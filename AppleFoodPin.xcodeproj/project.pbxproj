@@ -13,6 +13,8 @@
 		CE4284C92952A4D4005A5F0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4284C82952A4D4005A5F0C /* Preview Assets.xcassets */; };
 		CE4284D02959B0C6005A5F0C /* RestaurantListView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284CF2959B0C6005A5F0C /* RestaurantListView2.swift */; };
 		CE4284D2295C2968005A5F0C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284D1295C2968005A5F0C /* Restaurant.swift */; };
+		CE4284D6295C46B5005A5F0C /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284D5295C46B5005A5F0C /* ActivityView.swift */; };
+		CE4284D8295C56C7005A5F0C /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284D7295C56C7005A5F0C /* RestaurantDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		CE4284C82952A4D4005A5F0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE4284CF2959B0C6005A5F0C /* RestaurantListView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView2.swift; sourceTree = "<group>"; };
 		CE4284D1295C2968005A5F0C /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		CE4284D5295C46B5005A5F0C /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		CE4284D7295C56C7005A5F0C /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 				CE4284C12952A4D4005A5F0C /* AppleFoodPinApp.swift */,
 				CE4284C52952A4D4005A5F0C /* Assets.xcassets */,
 				CE4284C72952A4D4005A5F0C /* Preview Content */,
+				CE4284D5295C46B5005A5F0C /* ActivityView.swift */,
 			);
 			path = AppleFoodPin;
 			sourceTree = "<group>";
@@ -77,6 +82,7 @@
 			children = (
 				CE4284CF2959B0C6005A5F0C /* RestaurantListView2.swift */,
 				CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */,
+				CE4284D7295C56C7005A5F0C /* RestaurantDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,7 +167,9 @@
 			files = (
 				CE4284D2295C2968005A5F0C /* Restaurant.swift in Sources */,
 				CE4284D02959B0C6005A5F0C /* RestaurantListView2.swift in Sources */,
+				CE4284D8295C56C7005A5F0C /* RestaurantDetailView.swift in Sources */,
 				CE4284C42952A4D4005A5F0C /* RestaurantListView.swift in Sources */,
+				CE4284D6295C46B5005A5F0C /* ActivityView.swift in Sources */,
 				CE4284C22952A4D4005A5F0C /* AppleFoodPinApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
