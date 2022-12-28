@@ -34,8 +34,15 @@ struct RestaurantListView: View {
         ]
     
     var body: some View {
-        List(restaurants.indices, id: \.self){ index in
-            BasicTextImageRow(restaurant: $restaurants[index])
+        List {
+            ForEach(restaurants.indices, id: \.self) { index in
+                BasicTextImageRow(restaurant: $restaurants[index])
+            }
+            .onDelete(perform: { indexSet in
+                restaurants.remove(atOffsets: indexSet)
+            })
+            
+
         }
         .listStyle(.plain)
     }
