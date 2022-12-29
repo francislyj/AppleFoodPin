@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE24B2AC295D2DB100B18A2E /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE24B2AA295D2DB000B18A2E /* Nunito-Bold.ttf */; };
+		CE24B2AD295D2DB100B18A2E /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE24B2AB295D2DB100B18A2E /* Nunito-Regular.ttf */; };
+		CE24B2B1295D478100B18A2E /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24B2B0295D478100B18A2E /* UIColor+Ext.swift */; };
 		CE4284C22952A4D4005A5F0C /* AppleFoodPinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284C12952A4D4005A5F0C /* AppleFoodPinApp.swift */; };
 		CE4284C42952A4D4005A5F0C /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */; };
 		CE4284C62952A4D4005A5F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4284C52952A4D4005A5F0C /* Assets.xcassets */; };
@@ -18,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE24B2AA295D2DB000B18A2E /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		CE24B2AB295D2DB100B18A2E /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		CE24B2AE295D2EB600B18A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CE24B2B0295D478100B18A2E /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		CE4284BE2952A4D4005A5F0C /* AppleFoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleFoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4284C12952A4D4005A5F0C /* AppleFoodPinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleFoodPinApp.swift; sourceTree = "<group>"; };
 		CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
@@ -40,6 +47,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE24B2A6295D2CCC00B18A2E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE24B2A7295D2CE100B18A2E /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE24B2A7295D2CE100B18A2E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE24B2AA295D2DB000B18A2E /* Nunito-Bold.ttf */,
+				CE24B2AB295D2DB100B18A2E /* Nunito-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CE24B2AF295D46E700B18A2E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE24B2B0295D478100B18A2E /* UIColor+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CE4284B52952A4D4005A5F0C = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +91,9 @@
 		CE4284C02952A4D4005A5F0C /* AppleFoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				CE24B2AF295D46E700B18A2E /* Extensions */,
+				CE24B2AE295D2EB600B18A2E /* Info.plist */,
+				CE24B2A6295D2CCC00B18A2E /* Resources */,
 				CE4284D4295C369D005A5F0C /* Model */,
 				CE4284D3295C3682005A5F0C /* View */,
 				CE4284C12952A4D4005A5F0C /* AppleFoodPinApp.swift */,
@@ -154,6 +189,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4284C92952A4D4005A5F0C /* Preview Assets.xcassets in Resources */,
+				CE24B2AC295D2DB100B18A2E /* Nunito-Bold.ttf in Resources */,
+				CE24B2AD295D2DB100B18A2E /* Nunito-Regular.ttf in Resources */,
 				CE4284C62952A4D4005A5F0C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE24B2B1295D478100B18A2E /* UIColor+Ext.swift in Sources */,
 				CE4284D2295C2968005A5F0C /* Restaurant.swift in Sources */,
 				CE4284D02959B0C6005A5F0C /* RestaurantListView2.swift in Sources */,
 				CE4284D8295C56C7005A5F0C /* RestaurantDetailView.swift in Sources */,
@@ -301,6 +339,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppleFoodPin/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleFoodPin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -329,6 +368,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppleFoodPin/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleFoodPin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
