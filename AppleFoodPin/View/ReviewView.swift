@@ -11,6 +11,8 @@ struct ReviewView: View {
     
     var restaurant: Restaurant
     
+    @Binding var isDisplayed: Bool
+    
     var body: some View {
         ZStack {
             Image(restaurant.image)
@@ -29,7 +31,9 @@ struct ReviewView: View {
                 
                 VStack {
                     Button {
-                        
+                        withAnimation(.easeOut(duration: 0.3)) {
+                            self.isDisplayed = false
+                        }
                     } label: {
                         Image(systemName: "xmark")
                             .font(.system(size: 30))
@@ -58,6 +62,6 @@ struct ReviewView: View {
 
 struct ReviewView_Previews: PreviewProvider {
     static var previews: some View {
-        ReviewView(restaurant: Restaurant(name: "Royal Oak", type: "British", location: "2 Regency Street London SW1P 4BZ United Kingdom", phone: "343-988834", description: "Specialise in great pub food. Established in 1872, we have local and world lagers, craft beer and a selection of wine and spirits for people to enjoy. Don't forget to try our range of Young's Ales and Fish and Chips.", image: "royaloak", isFavorite: true))
+        ReviewView(restaurant: Restaurant(name: "Royal Oak", type: "British", location: "2 Regency Street London SW1P 4BZ United Kingdom", phone: "343-988834", description: "Specialise in great pub food. Established in 1872, we have local and world lagers, craft beer and a selection of wine and spirits for people to enjoy. Don't forget to try our range of Young's Ales and Fish and Chips.", image: "royaloak", isFavorite: true), isDisplayed: .constant(true))
     }
 }
