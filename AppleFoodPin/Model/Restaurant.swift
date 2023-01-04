@@ -44,7 +44,7 @@ enum Rating: String, CaseIterable {
         switch self {
         case .awesome: return "love"
         case .good: return "cool"
-        case .okay: return "return happy"
+        case .okay: return "happy"
         case .bad: return "sad"
         case .terrible: return "angry"
         }

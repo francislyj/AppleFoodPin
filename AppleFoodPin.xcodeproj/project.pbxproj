@@ -11,6 +11,7 @@
 		CE24B2AD295D2DB100B18A2E /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE24B2AB295D2DB100B18A2E /* Nunito-Regular.ttf */; };
 		CE24B2B1295D478100B18A2E /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24B2B0295D478100B18A2E /* UIColor+Ext.swift */; };
 		CE24B2B3295D998400B18A2E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24B2B2295D998400B18A2E /* MapView.swift */; };
+		CE24B2B5296594EB00B18A2E /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24B2B4296594EB00B18A2E /* ReviewView.swift */; };
 		CE4284C22952A4D4005A5F0C /* AppleFoodPinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284C12952A4D4005A5F0C /* AppleFoodPinApp.swift */; };
 		CE4284C42952A4D4005A5F0C /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */; };
 		CE4284C62952A4D4005A5F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4284C52952A4D4005A5F0C /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		CE24B2AE295D2EB600B18A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CE24B2B0295D478100B18A2E /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		CE24B2B2295D998400B18A2E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		CE24B2B4296594EB00B18A2E /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		CE4284BE2952A4D4005A5F0C /* AppleFoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleFoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4284C12952A4D4005A5F0C /* AppleFoodPinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleFoodPinApp.swift; sourceTree = "<group>"; };
 		CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */,
 				CE4284D7295C56C7005A5F0C /* RestaurantDetailView.swift */,
 				CE24B2B2295D998400B18A2E /* MapView.swift */,
+				CE24B2B4296594EB00B18A2E /* ReviewView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE24B2B1295D478100B18A2E /* UIColor+Ext.swift in Sources */,
+				CE24B2B5296594EB00B18A2E /* ReviewView.swift in Sources */,
 				CE24B2B3295D998400B18A2E /* MapView.swift in Sources */,
 				CE4284D2295C2968005A5F0C /* Restaurant.swift in Sources */,
 				CE4284D02959B0C6005A5F0C /* RestaurantListView2.swift in Sources */,
