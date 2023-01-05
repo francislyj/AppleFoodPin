@@ -13,6 +13,8 @@ struct ReviewView: View {
     
     @Binding var isDisplayed: Bool
     
+    @State private var showRatings = false
+    
     var body: some View {
         ZStack {
             Image(restaurant.image)
@@ -54,8 +56,14 @@ struct ReviewView: View {
                             .foregroundColor(.white)
                             .fontWeight(.bold)
                     }
+                    .opacity(showRatings ? 1.0 : 0)
+                    .offset(x: showRatings ? 0 : 1000)
+                    .animation(.easeOut.delay(Double(Rating.allCases.firstIndex(of: rating)!) * 0.5), value: showRatings)
                 }
             }
+        }
+        .onAppear {
+            showRatings.toggle()
         }
     }
 }
