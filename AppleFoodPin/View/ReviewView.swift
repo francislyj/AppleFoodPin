@@ -48,7 +48,7 @@ struct ReviewView: View {
             }
             
             VStack (alignment: .leading) {
-                ForEach(Rating.allCases, id: \.self) { rating in
+                ForEach(Restaurant.Rating.allCases, id: \.self) { rating in
                     HStack {
                         Image(rating.image)
                         Text(rating.rawValue.capitalized)
@@ -58,7 +58,11 @@ struct ReviewView: View {
                     }
                     .opacity(showRatings ? 1.0 : 0)
                     .offset(x: showRatings ? 0 : 1000)
-                    .animation(.easeOut.delay(Double(Rating.allCases.firstIndex(of: rating)!) * 0.5), value: showRatings)
+                    .animation(.easeOut.delay(Double(Restaurant.Rating.allCases.firstIndex(of: rating)!) * 0.5), value: showRatings)
+                    .onTapGesture {
+                        self.restaurant.rating = rating
+                        self.isDisplayed = false
+                    }
                 }
             }
         }
