@@ -12,8 +12,22 @@ struct NewRestaurantView: View {
     @State var restaurantName = ""
     
     var body: some View {
-        VStack (alignment: .leading) {
-            FormTextField(label: "Name", placeholder: "Fill in the restaurant name", value: $restaurantName)
+        NavigationView {
+            ScrollView {
+                VStack (alignment: .leading) {
+                    FormTextField(label: "Name", placeholder: "Fill in the restaurant name", value: $restaurantName)
+                    
+                    FormTextField(label: "TYPE", placeholder: "Fill in the restaurant type", value: .constant(""))
+                    
+                    FormTextField(label: "ADDRESS", placeholder: "Fill in the restaurant address", value: .constant(""))
+                    
+                    FormTextField(label: "PHONE", placeholder: "Fill in the restaurant phone", value: .constant(""))
+                    
+                    FormTextView(label: "DESCRIPTION", value: .constant(""), height: 100)
+                }
+                .padding()
+            }
+            .navigationTitle("New Restaurant")
         }
     }
 }
