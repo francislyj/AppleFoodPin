@@ -42,7 +42,7 @@ struct RestaurantDetailView: View {
 //        }
         ScrollView {
             VStack {
-                Image(restaurant.image)
+                Image(uiImage: UIImage(data: restaurant.image)!)
                     .resizable()
                     .scaledToFill()
                     .frame(minWidth: 0, maxWidth: .infinity)
@@ -71,8 +71,8 @@ struct RestaurantDetailView: View {
                                 .foregroundColor(.white)
                                 .padding()
                                 
-                                if let rating = restaurant.rating, !showReview {
-                                    Image(rating.image)
+                                if let imageData = restaurant.image, let rating = restaurant.ratingText, !showReview {
+                                    Image(uiImage: UIImage(data: imageData)!)
                                         .resizable()
                                         .frame(width: 60, height: 60)
                                         .padding([.bottom, .trailing])
@@ -158,7 +158,10 @@ struct RestaurantDetailView: View {
 struct RestaurantDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            RestaurantDetailView(restaurant: Restaurant(name: "Royal Oak", type: "British", location: "2 Regency Street London SW1P 4BZ United Kingdom", phone: "343-988834", description: "Specialise in great pub food. Established in 1872, we have local and world lagers, craft beer and a selection of wine and spirits for people to enjoy. Don't forget to try our range of Young's Ales and Fish and Chips.", image: "royaloak", isFavorite: true))
-        }.accentColor(.white)
+            RestaurantDetailView(restaurant: (PersistenceController.testData?.first)!)
+                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        }
+        .accentColor(.white)
     }
 }
+

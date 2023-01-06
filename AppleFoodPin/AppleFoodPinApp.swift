@@ -10,6 +10,8 @@ import SwiftUI
 @main
 struct AppleFoodPinApp: App {
     
+    let persistenceController = PersistenceController.shared
+    
     init() {
         let navBarAppearance = UINavigationBarAppearance()
         
@@ -31,6 +33,7 @@ struct AppleFoodPinApp: App {
     var body: some Scene {
         WindowGroup {
             RestaurantListView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

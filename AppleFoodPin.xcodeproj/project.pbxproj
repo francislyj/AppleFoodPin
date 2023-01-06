@@ -14,6 +14,8 @@
 		CE24B2B5296594EB00B18A2E /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24B2B4296594EB00B18A2E /* ReviewView.swift */; };
 		CE24B2B72966B47B00B18A2E /* NewRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24B2B62966B47B00B18A2E /* NewRestaurantView.swift */; };
 		CE24B2BC2968053300B18A2E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24B2BB2968053300B18A2E /* ImagePicker.swift */; };
+		CE24B2DD2968764A00B18A2E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24B2DC2968764A00B18A2E /* Persistence.swift */; };
+		CE24B2E02968778000B18A2E /* AppleFoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE24B2DE2968778000B18A2E /* AppleFoodPin.xcdatamodeld */; };
 		CE4284C22952A4D4005A5F0C /* AppleFoodPinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284C12952A4D4005A5F0C /* AppleFoodPinApp.swift */; };
 		CE4284C42952A4D4005A5F0C /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */; };
 		CE4284C62952A4D4005A5F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4284C52952A4D4005A5F0C /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		CE24B2B4296594EB00B18A2E /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		CE24B2B62966B47B00B18A2E /* NewRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantView.swift; sourceTree = "<group>"; };
 		CE24B2BB2968053300B18A2E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		CE24B2DC2968764A00B18A2E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		CE24B2DF2968778000B18A2E /* AppleFoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppleFoodPin.xcdatamodel; sourceTree = "<group>"; };
 		CE4284BE2952A4D4005A5F0C /* AppleFoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleFoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4284C12952A4D4005A5F0C /* AppleFoodPinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleFoodPinApp.swift; sourceTree = "<group>"; };
 		CE4284C32952A4D4005A5F0C /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				CE4284C52952A4D4005A5F0C /* Assets.xcassets */,
 				CE4284C72952A4D4005A5F0C /* Preview Content */,
 				CE4284D5295C46B5005A5F0C /* ActivityView.swift */,
+				CE24B2DE2968778000B18A2E /* AppleFoodPin.xcdatamodeld */,
 			);
 			path = AppleFoodPin;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4284D1295C2968005A5F0C /* Restaurant.swift */,
+				CE24B2DC2968764A00B18A2E /* Persistence.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,10 +233,12 @@
 				CE24B2B5296594EB00B18A2E /* ReviewView.swift in Sources */,
 				CE24B2B3295D998400B18A2E /* MapView.swift in Sources */,
 				CE4284D2295C2968005A5F0C /* Restaurant.swift in Sources */,
+				CE24B2E02968778000B18A2E /* AppleFoodPin.xcdatamodeld in Sources */,
 				CE4284D02959B0C6005A5F0C /* RestaurantListView2.swift in Sources */,
 				CE4284D8295C56C7005A5F0C /* RestaurantDetailView.swift in Sources */,
 				CE24B2BC2968053300B18A2E /* ImagePicker.swift in Sources */,
 				CE4284C42952A4D4005A5F0C /* RestaurantListView.swift in Sources */,
+				CE24B2DD2968764A00B18A2E /* Persistence.swift in Sources */,
 				CE4284D6295C46B5005A5F0C /* ActivityView.swift in Sources */,
 				CE4284C22952A4D4005A5F0C /* AppleFoodPinApp.swift in Sources */,
 			);
@@ -433,6 +441,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE24B2DE2968778000B18A2E /* AppleFoodPin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE24B2DF2968778000B18A2E /* AppleFoodPin.xcdatamodel */,
+			);
+			currentVersion = CE24B2DF2968778000B18A2E /* AppleFoodPin.xcdatamodel */;
+			path = AppleFoodPin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE4284B62952A4D4005A5F0C /* Project object */;
 }
