@@ -24,6 +24,7 @@
 		CE4284D2295C2968005A5F0C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284D1295C2968005A5F0C /* Restaurant.swift */; };
 		CE4284D6295C46B5005A5F0C /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284D5295C46B5005A5F0C /* ActivityView.swift */; };
 		CE4284D8295C56C7005A5F0C /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284D7295C56C7005A5F0C /* RestaurantDetailView.swift */; };
+		CEACBB47296B98110056BC8F /* RestaurantFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACBB46296B98110056BC8F /* RestaurantFormViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		CE4284D1295C2968005A5F0C /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		CE4284D5295C46B5005A5F0C /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		CE4284D7295C56C7005A5F0C /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
+		CEACBB46296B98110056BC8F /* RestaurantFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFormViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		CE4284C02952A4D4005A5F0C /* AppleFoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				CEACBB45296B97F30056BC8F /* ViewModel */,
 				CE24B2B8296804D400B18A2E /* Util */,
 				CE24B2AF295D46E700B18A2E /* Extensions */,
 				CE24B2AE295D2EB600B18A2E /* Info.plist */,
@@ -154,6 +157,14 @@
 				CE24B2DC2968764A00B18A2E /* Persistence.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CEACBB45296B97F30056BC8F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEACBB46296B98110056BC8F /* RestaurantFormViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 				CE4284D02959B0C6005A5F0C /* RestaurantListView2.swift in Sources */,
 				CE4284D8295C56C7005A5F0C /* RestaurantDetailView.swift in Sources */,
 				CE24B2BC2968053300B18A2E /* ImagePicker.swift in Sources */,
+				CEACBB47296B98110056BC8F /* RestaurantFormViewModel.swift in Sources */,
 				CE4284C42952A4D4005A5F0C /* RestaurantListView.swift in Sources */,
 				CE24B2DD2968764A00B18A2E /* Persistence.swift in Sources */,
 				CE4284D6295C46B5005A5F0C /* ActivityView.swift in Sources */,
