@@ -18,6 +18,8 @@ struct RestaurantListView: View {
     
     @State private var showNewRestaurant = false
     
+    @State private var searchText = ""
+    
     private func deleteRecord(indexSet: IndexSet) {
         
         for index in indexSet {
@@ -55,28 +57,11 @@ struct RestaurantListView: View {
                             
                             
                             BasicTextImageRow(restaurant: restaurants[index])
-    //                            .swipeActions(edge: .trailing, allowsFullSwipe: false, content: {
-    //                                Button {
-    //
-    //                                } label: {
-    //                                    Image(systemName: "heart")
-    //                                }
-    //                                .tint(.green)
-    //
-    //                                Button {
-    //
-    //                                }label: {
-    //                                    Image(systemName: "square.and.arrow.up")
-    //                                }
-    //                                .tint(.orange)
-    //                        })
                         }
                     }
                     .onDelete(perform: deleteRecord)
                     .listRowSeparator(.hidden)
                 }
-                
-                
             }
             .listStyle(.plain)
             
@@ -89,11 +74,21 @@ struct RestaurantListView: View {
                     Image(systemName: "plus")
                 }
             }
+            
         }
         .sheet(isPresented: $showNewRestaurant) {
             NewRestaurantView()
         }
         .accentColor(.green)
+        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search restaurants ...") {
+            Text("Thai").searchCompletion("Thai")
+            Text("Cafe").searchCompletion("aaa")
+        }
+        .onChange(of: searchText) { searchText in
+            let predicate = searchText.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[c] %@", searchText)
+            
+            restaurants.nsPredicate = predicate
+        }
     }
 }
 
