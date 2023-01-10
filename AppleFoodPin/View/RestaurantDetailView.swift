@@ -9,11 +9,13 @@ import SwiftUI
 
 struct RestaurantDetailView: View {
     
+    @Environment(\.managedObjectContext) var context
+    
     @Environment(\.dismiss) var dismiss
     
     @State private var showReview = false
     
-    var restaurant: Restaurant
+    @ObservedObject var restaurant: Restaurant
     
     
     var body: some View {
@@ -49,12 +51,18 @@ struct RestaurantDetailView: View {
                     .frame(height: 445)
                     .overlay {
                         VStack {
-                            Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
-                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing)
-                                .padding()
-                                .font(.system(size: 30))
-                                .foregroundColor(.indigo)
-                                .padding(.top, 40)
+                            Button {
+                                restaurant.isFavorite.toggle()
+                            } label: {
+                                Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
+                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing)
+                                    .padding()
+                                    .font(.system(size: 30))
+                                    .foregroundColor(.indigo)
+                                    .padding(.top, 40)
+                            }
+                            
+                                
                             
                             HStack(alignment: .bottom) {
                                 VStack(alignment: .leading, spacing: 5) {
@@ -84,7 +92,7 @@ struct RestaurantDetailView: View {
                         }
                     }
                 
-                Text(restaurant.description)
+                Text(restaurant.summary)
                     .padding()
                 
                 HStack(alignment: .top) {
@@ -128,18 +136,20 @@ struct RestaurantDetailView: View {
                 .controlSize(.large)
                 .padding(.horizontal)
                 .padding(.bottom, 20)
-                    
-                
                 
             }
-            
-            
         }
         .overlay {
             self.showReview ? ZStack {
                 ReviewView(restaurant: restaurant, isDisplayed: $showReview)
                     .navigationBarHidden(true)
             } : nil
+        }
+        .onChange(of: restaurant) { _ in
+            if self.context.hasChanges {
+                try? self.context.save()
+            }
+            
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
