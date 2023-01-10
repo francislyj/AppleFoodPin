@@ -25,6 +25,7 @@
 		CE4284D6295C46B5005A5F0C /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284D5295C46B5005A5F0C /* ActivityView.swift */; };
 		CE4284D8295C56C7005A5F0C /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284D7295C56C7005A5F0C /* RestaurantDetailView.swift */; };
 		CEACBB47296B98110056BC8F /* RestaurantFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACBB46296B98110056BC8F /* RestaurantFormViewModel.swift */; };
+		CEACBB49296D5DCF0056BC8F /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACBB48296D5DCF0056BC8F /* TutorialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		CE4284D5295C46B5005A5F0C /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		CE4284D7295C56C7005A5F0C /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		CEACBB46296B98110056BC8F /* RestaurantFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFormViewModel.swift; sourceTree = "<group>"; };
+		CEACBB48296D5DCF0056BC8F /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				CE24B2B2295D998400B18A2E /* MapView.swift */,
 				CE24B2B4296594EB00B18A2E /* ReviewView.swift */,
 				CE24B2B62966B47B00B18A2E /* NewRestaurantView.swift */,
+				CEACBB48296D5DCF0056BC8F /* TutorialView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				CE24B2E02968778000B18A2E /* AppleFoodPin.xcdatamodeld in Sources */,
 				CE4284D02959B0C6005A5F0C /* RestaurantListView2.swift in Sources */,
 				CE4284D8295C56C7005A5F0C /* RestaurantDetailView.swift in Sources */,
+				CEACBB49296D5DCF0056BC8F /* TutorialView.swift in Sources */,
 				CE24B2BC2968053300B18A2E /* ImagePicker.swift in Sources */,
 				CEACBB47296B98110056BC8F /* RestaurantFormViewModel.swift in Sources */,
 				CE4284C42952A4D4005A5F0C /* RestaurantListView.swift in Sources */,

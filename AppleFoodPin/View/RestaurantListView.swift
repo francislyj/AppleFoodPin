@@ -20,6 +20,11 @@ struct RestaurantListView: View {
     
     @State private var searchText = ""
     
+    @State private var showWalkthrough = false
+    
+    @AppStorage("hasViewedWalkthrough") var hasViewedWalkthrough: Bool = false
+    
+    
     private func deleteRecord(indexSet: IndexSet) {
         
         for index in indexSet {
@@ -76,6 +81,9 @@ struct RestaurantListView: View {
             }
             
         }
+        .onAppear() {
+            showWalkthrough = hasViewedWalkthrough ? false : true
+        }
         .sheet(isPresented: $showNewRestaurant) {
             NewRestaurantView()
         }
@@ -88,6 +96,9 @@ struct RestaurantListView: View {
             let predicate = searchText.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[c] %@", searchText)
             
             restaurants.nsPredicate = predicate
+        }
+        .sheet(isPresented: $showWalkthrough) {
+            TutorialView()
         }
     }
 }
