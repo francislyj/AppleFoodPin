@@ -26,6 +26,7 @@
 		CE4284D8295C56C7005A5F0C /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4284D7295C56C7005A5F0C /* RestaurantDetailView.swift */; };
 		CEA6C68A296EB9DA000F511F /* RestaurantCloudStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C689296EB9DA000F511F /* RestaurantCloudStore.swift */; };
 		CEA6C68C296EBE99000F511F /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6C68B296EBE99000F511F /* DiscoverView.swift */; };
+		CEA6C68F29701FBF000F511F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEA6C68D29701FBF000F511F /* Localizable.strings */; };
 		CEACBB47296B98110056BC8F /* RestaurantFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACBB46296B98110056BC8F /* RestaurantFormViewModel.swift */; };
 		CEACBB49296D5DCF0056BC8F /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACBB48296D5DCF0056BC8F /* TutorialView.swift */; };
 		CEACBB4B296D7AFC0056BC8F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACBB4A296D7AFC0056BC8F /* MainView.swift */; };
@@ -56,6 +57,8 @@
 		CE4284D7295C56C7005A5F0C /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		CEA6C689296EB9DA000F511F /* RestaurantCloudStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCloudStore.swift; sourceTree = "<group>"; };
 		CEA6C68B296EBE99000F511F /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		CEA6C68E29701FBF000F511F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CEA6C6902970204C000F511F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEACBB46296B98110056BC8F /* RestaurantFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFormViewModel.swift; sourceTree = "<group>"; };
 		CEACBB48296D5DCF0056BC8F /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		CEACBB4A296D7AFC0056BC8F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 				CE24B2B8296804D400B18A2E /* Util */,
 				CE24B2AF295D46E700B18A2E /* Extensions */,
 				CE24B2AE295D2EB600B18A2E /* Info.plist */,
+				CEA6C68D29701FBF000F511F /* Localizable.strings */,
 				CE24B2A6295D2CCC00B18A2E /* Resources */,
 				CE4284D4295C369D005A5F0C /* Model */,
 				CE4284D3295C3682005A5F0C /* View */,
@@ -230,6 +234,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
+				de,
 			);
 			mainGroup = CE4284B52952A4D4005A5F0C;
 			productRefGroup = CE4284BF2952A4D4005A5F0C /* Products */;
@@ -246,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA6C68F29701FBF000F511F /* Localizable.strings in Resources */,
 				CE4284C92952A4D4005A5F0C /* Preview Assets.xcassets in Resources */,
 				CE24B2AC295D2DB100B18A2E /* Nunito-Bold.ttf in Resources */,
 				CE24B2AD295D2DB100B18A2E /* Nunito-Regular.ttf in Resources */,
@@ -285,6 +292,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEA6C68D29701FBF000F511F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEA6C68E29701FBF000F511F /* zh-Hant */,
+				CEA6C6902970204C000F511F /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CE4284CA2952A4D4005A5F0C /* Debug */ = {
