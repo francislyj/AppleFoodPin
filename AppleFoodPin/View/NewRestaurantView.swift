@@ -17,6 +17,7 @@ struct NewRestaurantView: View {
         }
     }
     
+    
     @Environment(\.managedObjectContext) var context
     
     @State private var photoSource: PhotoSource?
