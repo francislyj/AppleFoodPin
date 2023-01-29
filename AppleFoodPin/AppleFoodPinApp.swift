@@ -93,6 +93,14 @@ final class MainSceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         return true
     }
+    
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let shortcutItem = connectionOptions.shortcutItem else {
+            return
+        }
+
+        handleQuickAction(shortcutItem: shortcutItem)
+    }
 }
 
 

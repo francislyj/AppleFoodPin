@@ -100,6 +100,15 @@ struct RestaurantListView: View {
         .sheet(isPresented: $showWalkthrough) {
             TutorialView()
         }
+        .onOpenURL(perform: { url in
+            switch url.path {
+            case "NewRestaurant":
+                showNewRestaurant = true
+            default:
+                return
+            }
+            
+        })
     }
 }
 
