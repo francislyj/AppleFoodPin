@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import UserNotifications
+
 
 @main
 struct AppleFoodPinApp: App {
