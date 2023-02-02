@@ -24,6 +24,30 @@ struct RestaurantListView: View {
     
     @AppStorage("hasViewedWalkthrough") var hasViewedWalkthrough: Bool = false
     
+    private func prepareNotification() {
+        // Make sure the restaurant array is not empty
+        if restaurants.count <= 0 {
+            return
+        }
+
+        // Pick a restaurant randomly
+        let randomNum = Int.random(in: 0..<restaurants.count)
+        let suggestedRestaurant = restaurants[randomNum]
+
+        // Create the user notification
+        let content = UNMutableNotificationContent()
+        content.title = "Restaurant Recommendation"
+        content.subtitle = "Try new food today"
+        content.body = "I recommend you to check out \(suggestedRestaurant.name). The restaurant is one of your favorites. It is located at \(suggestedRestaurant.location). Would you like to give it a try?"
+        content.sound = UNNotificationSound.default
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let request = UNNotificationRequest(identifier: "foodpin.restaurantSuggestion", content: content, trigger: trigger)
+
+        // Schedule the notification
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
     
     private func deleteRecord(indexSet: IndexSet) {
         
@@ -109,6 +133,10 @@ struct RestaurantListView: View {
             }
             
         })
+        .task {
+            print("restaurant task begin prepareNotification")
+            prepareNotification()
+        }
     }
 }
 
